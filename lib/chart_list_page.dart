@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:visualization_demo/bar_chart_page.dart';
 import 'package:visualization_demo/line_chart_page.dart';
+import 'package:visualization_demo/pie_chart_page.dart';
 
 class ChartListPage extends StatelessWidget {
   @override
@@ -16,6 +17,11 @@ class ChartListPage extends StatelessWidget {
             title: Text('Line Chart'),
             onTap: () => Navigator.push(
                 context, MaterialPageRoute(builder: (_) => LineChartPage())),
+          ),
+          ListTile(
+            title: Text('Pie Chart'),
+            onTap: () => Navigator.push(
+                context, MaterialPageRoute(builder: (_) => PieChartPage())),
           )
         ]));
   }
