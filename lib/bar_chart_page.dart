@@ -30,8 +30,12 @@ class BarChartPage extends StatelessWidget {
         ),
         body: Padding(
           padding: EdgeInsets.all(16),
-          child: BarChart(seriesList,
-              animate: true, barGroupingType: BarGroupingType.stacked),
+          child: BarChart(
+            seriesList,
+            animate: true,
+            barGroupingType: BarGroupingType.stacked,
+            behaviors: [SeriesLegend()],
+          ),
         ));
   }
 }

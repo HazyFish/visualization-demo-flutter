@@ -12,7 +12,7 @@ class Item extends Point<double> {
 class ScatterPlotChartPage extends StatelessWidget {
   final List<Series<Item, num>> seriesList = [
     Series(
-        id: 'A',
+        id: 'Type A',
         data: [
           Item(16, 12, 16),
           Item(24, 16, 32),
@@ -25,7 +25,7 @@ class ScatterPlotChartPage extends StatelessWidget {
         measureFn: (it, _) => it.y,
         radiusPxFn: (it, _) => it.radius),
     Series(
-        id: 'B',
+        id: 'Type B',
         data: [
           Item(8, 24, 12),
           Item(6, 16, 16),
@@ -46,7 +46,11 @@ class ScatterPlotChartPage extends StatelessWidget {
       ),
       body: Padding(
         padding: EdgeInsets.all(16),
-        child: ScatterPlotChart(seriesList, animate: true),
+        child: ScatterPlotChart(
+          seriesList,
+          animate: true,
+          behaviors: [SeriesLegend()],
+        ),
       ),
     );
   }

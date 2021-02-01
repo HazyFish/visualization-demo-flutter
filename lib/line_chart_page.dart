@@ -30,7 +30,11 @@ class LineChartPage extends StatelessWidget {
       ),
       body: Padding(
           padding: EdgeInsets.all(16),
-          child: LineChart(seriesList, animate: true)),
+          child: LineChart(
+            seriesList,
+            animate: true,
+            behaviors: [SeriesLegend()],
+          )),
     );
   }
 }
