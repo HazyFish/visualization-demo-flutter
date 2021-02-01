@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:visualization_demo/bar_chart_page.dart';
+import 'package:visualization_demo/line_chart_page.dart';
 
 class ChartListPage extends StatelessWidget {
   @override
@@ -10,7 +11,12 @@ class ChartListPage extends StatelessWidget {
           ListTile(
               title: Text('Bar Chart'),
               onTap: () => Navigator.push(
-                  context, MaterialPageRoute(builder: (_) => BarChartPage())))
+                  context, MaterialPageRoute(builder: (_) => BarChartPage()))),
+          ListTile(
+            title: Text('Line Chart'),
+            onTap: () => Navigator.push(
+                context, MaterialPageRoute(builder: (_) => LineChartPage())),
+          )
         ]));
   }
 }
